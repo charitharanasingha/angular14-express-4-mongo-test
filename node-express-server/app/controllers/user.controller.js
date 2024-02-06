@@ -6,8 +6,8 @@ const ses = require("nodemailer-ses-transport");
 const User = db.users;
 const transporter = nodemailer.createTransport(
   ses({
-    accessKeyId: "AKIAY6F2WV77QETASLWB",
-    secretAccessKey: "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",
+    accessKeyId: "<AWS Access Key>",
+    secretAccessKey: "<AWS Secret Key>",
     region: "us-east-1", // Change this to your AWS region
   })
 );
