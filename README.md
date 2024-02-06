@@ -7,8 +7,8 @@
 cd node-express-server
 npm install
 node server.js
-API will be available in `http://localhost:8080/`.
 ```
+API will be available in `http://localhost:8080/`.
 
 ### Angular Client
 ```
