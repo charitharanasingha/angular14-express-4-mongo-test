@@ -1,0 +1,46 @@
+<div class="list row">
+  <div class="col-md-8">
+    <div class="input-group mb-3">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Search by name"
+        [(ngModel)]="name"
+      />
+      <div class="input-group-append">
+        <button
+          class="btn btn-outline-secondary"
+          (click)="searchName()"
+        >
+          Search
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-8">
+    <h4>Users</h4>
+    <button routerLink="add" class="mb-3 btn btn-sm btn-success">
+      + Add New
+    </button>
+    <ul class="list-group">
+      <li
+        class="list-group-item"
+        *ngFor="let user of users; let i = index"
+        [class.active]="i == currentIndex"
+        (click)="setActiveUser(user, i)"
+      >
+        <strong>{{ user.name }}</strong>
+        <br/>
+        <span><i>{{ user.email }}</i></span>
+      </li>
+    </ul>
+
+  
+  </div>
+  <div class="col-md-4">
+    <app-user-details
+      [viewMode]="true"
+      [currentUser]="currentUser"
+    ></app-user-details>
+  </div>
+</div>
